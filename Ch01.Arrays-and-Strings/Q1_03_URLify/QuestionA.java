@@ -4,21 +4,22 @@ package Q1_03_URLify;
 import java.util.Arrays;
 
 class QuestionA {
-    static String urlify(String str){
-        char[] array =
-        char[] resultStr = new char[128];
-        int idx = 0;
+    static void urlify(char[] str, int strLen){
+        int spaceCount = 0, idx, i;
+        for (i = 0; i<strLen; i++)
+            if (str[i] == ' ') spaceCount++;
 
-        for (int i=0; i<str.length(); i++) {
-            if (str.charAt(i)==' ') {
-                resultStr[idx++] = '%';
-                resultStr[idx++] = '2';
-                resultStr[idx++] = '0';
+        idx = strLen + spaceCount * 2 - 1;
+
+        for (i = strLen - 1; i >= 0; i--) {
+            if (str[i] == ' ') {
+                str[idx] = '0';
+                str[idx-1] = '2';
+                str[idx-2] = '%';
+                idx -= 3;
             }
             else
-                resultStr[idx++] = str.charAt(i);
+                str[idx--] = str[i];
         }
-
-        return new String(resultStr);
     }
 }
