@@ -18,8 +18,8 @@ class QuestionA {
         else
             countOneLetter = 1;
 
-        for (int i = idx; i < arr.length - 1; i++) {
-            if (arr[idx] != arr[idx + 1]) {
+        for (int i = idx; i < arr.length - 1; i+=2) {
+            if (arr[i] != arr[i + 1]) {
                 if (countOneLetter == 0)
                     return false;
                 else
