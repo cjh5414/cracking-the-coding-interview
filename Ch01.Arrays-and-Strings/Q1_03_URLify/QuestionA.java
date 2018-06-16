@@ -1,8 +1,6 @@
 package Q1_03_URLify;
 
 
-import java.util.Arrays;
-
 class QuestionA {
     static void urlify(char[] str, int strLen){
         int spaceCount = 0, idx, i;
