@@ -23,5 +23,16 @@ public class Tester {
         System.out.println("abcabc: " + QuestionB.isPalindromePermutation("abcabc"));
         System.out.println("adbcacb: " + QuestionB.isPalindromePermutation("adbcacb"));
         System.out.println("abcdeabcdeea: " + QuestionB.isPalindromePermutation("abcdeabcdeea"));
+
+        System.out.println("");
+
+        System.out.println("Question C.");
+        System.out.println("Tact Coa : " + QuestionC.isPalindromePermutation("Tact Coa"));
+        System.out.println("Txct Coa : " + QuestionC.isPalindromePermutation("Txct Coa"));
+        System.out.println("aaaab: " + QuestionC.isPalindromePermutation("aaaab"));
+        System.out.println("a ba a  a: " + QuestionC.isPalindromePermutation("a ba a  a"));
+        System.out.println("abcabc: " + QuestionC.isPalindromePermutation("abcabc"));
+        System.out.println("adbcacb: " + QuestionC.isPalindromePermutation("adbcacb"));
+        System.out.println("abcdeabcdeea: " + QuestionC.isPalindromePermutation("abcdeabcdeea"));
     }
 }
