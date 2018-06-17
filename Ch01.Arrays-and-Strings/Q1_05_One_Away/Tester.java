@@ -8,5 +8,9 @@ public class Tester {
         System.out.println("Question A.");
         for (String[] strPair : strPairArray)
             System.out.println(strPair[0] + ", " + strPair[1] + " -> " + QuestionA.isOneAway(strPair[0], strPair[1]));
+
+        System.out.println("Question B.");
+        for (String[] strPair : strPairArray)
+            System.out.println(strPair[0] + ", " + strPair[1] + " -> " + QuestionB.isOneEditAway(strPair[0], strPair[1]));
     }
 }
