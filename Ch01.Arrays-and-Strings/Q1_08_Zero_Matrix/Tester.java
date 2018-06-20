@@ -19,9 +19,17 @@ public class Tester {
                 {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}
         };
 
+//        System.out.println("Question A.");
+//        for (int[][] matrix : matrixs) {
+//            matrixPrint(matrix);
+//            QuestionA.makeMatrixZero(matrix);
+//            matrixPrint(matrix);
+//        }
+
+        System.out.println("Question B.");
         for (int[][] matrix : matrixs) {
             matrixPrint(matrix);
-            QuestionA.makeMatrixZero(matrix);
+            QuestionB.makeMatrixZero(matrix);
             matrixPrint(matrix);
         }
     }

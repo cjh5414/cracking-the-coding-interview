@@ -17,10 +17,15 @@ class QuestionA {
         }
 
         for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (rowZero[i])
+            if(rowZero[i]) {
+                for (int j = 0; j < col; j++)
                     matrix[i][j] = 0;
-                else if (colZero[j])
+            }
+        }
+
+        for (int j = 0; j < col; j++) {
+            if(colZero[j]) {
+                for (int i = 0; i < row; i++)
                     matrix[i][j] = 0;
             }
         }
