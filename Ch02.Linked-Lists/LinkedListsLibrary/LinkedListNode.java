@@ -24,4 +24,14 @@ public class LinkedListNode {
         else
             return ((Integer) data).toString();
     }
+
+    public LinkedListNode clone() {
+        LinkedListNode newHead = new LinkedListNode(this.data);
+
+        if (next != null) {
+            newHead.next = next.clone();
+        }
+
+        return newHead;
+    }
 }
