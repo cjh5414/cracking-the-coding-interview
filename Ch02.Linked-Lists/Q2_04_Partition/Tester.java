@@ -16,7 +16,8 @@ public class Tester {
         }
 
         System.out.println(head.printForward());
-        QuestionA.partition(head, 5);
+        //QuestionA.partition(head, 5);
+        QuestionB.partition(head, 5);
         System.out.println(head.printForward());
     }
 }
