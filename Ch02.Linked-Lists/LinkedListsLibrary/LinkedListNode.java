@@ -10,6 +10,17 @@ public class LinkedListNode {
         this.data = data;
     }
 
+    public LinkedListNode(int[] intlist) {
+        this.data = intlist[0];
+        LinkedListNode temp = this;
+
+        for (int i = 1; i < intlist.length; i++) {
+            LinkedListNode newNode = new LinkedListNode(intlist[i]);
+            temp.next = newNode;
+            temp = temp.next;
+        }
+    }
+
     public void setNext(LinkedListNode next) {
         this.next = next;
     }
