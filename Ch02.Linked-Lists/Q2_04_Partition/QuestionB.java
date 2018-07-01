@@ -35,6 +35,7 @@ public class QuestionB {
             n = n.next;
         }
 
+        secondTail.next = null;
         firstTail.next = secondHead;
         n = firstHead;
     }
