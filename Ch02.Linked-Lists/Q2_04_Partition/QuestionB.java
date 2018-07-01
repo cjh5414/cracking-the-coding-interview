@@ -9,17 +9,28 @@ public class QuestionB {
         LinkedListNode secondHead = null;
         LinkedListNode firstTail = null;
         LinkedListNode secondTail = null;
-ㅎ
+
         while (n != null) {
+            System.out.println(n.data);
             if (n.data >= mid) {
-                if (secondHead == null)
-                    secondHead = secondTail = n;
-                secondTail.next = n;
+                if (secondHead == null) {
+                    secondHead = n;
+                    secondTail = n;
+                }
+                else {
+                    secondTail.next = n;
+                    secondTail = secondTail.next;
+                }
             }
             else {
-                if (firstHead == null)
-                    firstHead = firstTail = n;
-                firstTail.next = n;
+                if (firstHead == null) {
+                    firstHead = n;
+                    firstTail = n;
+                }
+                else {
+                    firstTail.next = n;
+                    firstTail = firstTail.next;
+                }
             }
             n = n.next;
         }
