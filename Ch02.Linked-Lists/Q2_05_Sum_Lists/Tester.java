@@ -5,8 +5,8 @@ import LinkedListsLibrary.LinkedListNode;
 
 public class Tester {
     public static void main(String[] args) {
-        int[] intlist1 = {1, 2, 3, 4};
-        int[] intlist2 = {1, 2, 3, 4};
+        int[] intlist1 = {7, 1, 7};
+        int[] intlist2 = {5, 9, 2, 2};
 
         LinkedListNode num1 = new LinkedListNode(intlist1);
         LinkedListNode num2 = new LinkedListNode(intlist2);
