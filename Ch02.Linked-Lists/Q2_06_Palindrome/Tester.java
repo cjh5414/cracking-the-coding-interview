@@ -10,6 +10,7 @@ public class Tester {
         LinkedListNode head = new LinkedListNode(intlist);
 
         System.out.println(head.printForward());
-        System.out.println(" Palindrome : " + QuestionA.isPalindrome(head));
+        System.out.println("A. Palindrome : " + QuestionA.isPalindrome(head));
+        System.out.println("B. Palindrome : " + QuestionB.isPalindrome(head));
     }
 }
