@@ -16,10 +16,29 @@ public class QuestionA {
 
         while (temp2.next != null) {
             len2++;
-            tepm2 = temp2.next;
+            temp2 = temp2.next;
         }
 
         if (temp1 != temp2) return null;
 
+        temp1 = head1;
+        temp2 = head2;
+
+        if (len1 > len2) {
+            for (int i = 0; i < len1 - len2; i++)
+                temp1 = temp1.next;
+        }
+
+        else if (len1 < len2) {
+            for (int i = 0; i < len2 - len1; i++)
+                temp2 = temp2.next;
+        }
+
+        while (temp1 != temp2) {
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+
+        return temp1;
     }
 }
