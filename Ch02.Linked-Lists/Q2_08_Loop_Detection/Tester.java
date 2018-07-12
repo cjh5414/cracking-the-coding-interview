@@ -25,5 +25,9 @@ public class Tester {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
+        System.out.println("");
+
+        LinkedListNode startNode = QuestionA.findStartCircle(head);
+        System.out.println("Start : " + startNode.data);
     }
 }
