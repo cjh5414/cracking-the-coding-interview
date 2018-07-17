@@ -1,6 +1,6 @@
 package StackAndQueueLibrary;
 
-public class Tester {
+public class StackTester {
     public static void main(String[] args) {
         MyStack<Integer> myStack = new MyStack<Integer>();
 
