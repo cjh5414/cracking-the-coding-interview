@@ -21,7 +21,7 @@ public class MyQueue<T> {
     private QueueNode<T> head = null;
     private QueueNode<T> tail = null;
 
-    public void push(T data) {
+    public void add(T data) {
         QueueNode<T> node = new QueueNode<T>(data);
 
         if (head == null)
@@ -33,10 +33,11 @@ public class MyQueue<T> {
         }
     }
 
-    public T pop() {
-        QueueNode<T> temp = head;
+    public T remove() {
+        T data = head.getData();
         head = head.next;
-        return temp.getData();
+        if (head == null) tail = null;
+        return data;
     }
 
     public T peek() {

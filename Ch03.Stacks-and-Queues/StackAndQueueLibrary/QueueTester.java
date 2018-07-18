@@ -5,12 +5,12 @@ public class QueueTester {
         MyQueue<Integer> myQueue = new MyQueue<Integer>();
 
         System.out.println("Origin : ");
-        myQueue.push(10);
-        myQueue.push(32);
-        myQueue.push(5);
+        myQueue.add(10);
+        myQueue.add(32);
+        myQueue.add(5);
         myQueue.print();
 
-        System.out.println("Pop " + myQueue.pop() + " : ");
+        System.out.println("Pop " + myQueue.remove() + " : ");
         myQueue.print();
 
         System.out.println("Peek " + myQueue.peek() + " : ");
