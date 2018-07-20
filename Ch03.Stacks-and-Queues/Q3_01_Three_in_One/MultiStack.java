@@ -1,5 +1,7 @@
 package Q3_01_Three_in_One;
 
+import java.util.EmptyStackException;
+
 
 public class MultiStack {
     private int numberOfStacks = 3;
@@ -13,15 +15,32 @@ public class MultiStack {
     }
 
     public void push(int i, int data) {
+        if (isFull(i))
+            throw new EmptyStackException();
+
         array[(size * i) + index[i]++] = data;
     }
 
     public int peek(int i) {
+        if (isEmpty(i))
+            throw new EmptyStackException();
+
         return array[(size * i) + index[i] - 1];
     }
 
     public int pop(int i) {
+        if (isEmpty(i))
+            throw new EmptyStackException();
+
         return array[(size * i) + (index[i]--) - 1];
+    }
+
+    public boolean isFull(int i) {
+        return index[i] >= (size * (i + 1) - 1);
+    }
+
+    public boolean isEmpty(int i) {
+        return index[i] <= (size * i);
     }
 
     public void print() {
