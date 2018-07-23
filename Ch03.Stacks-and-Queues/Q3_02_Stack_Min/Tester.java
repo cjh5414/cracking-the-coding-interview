@@ -17,5 +17,21 @@ public class Tester {
         System.out.println(stackWithMin.getMin());
         stackWithMin.pop();
         System.out.println(stackWithMin.getMin());
+
+        System.out.println("-------");
+        StackWithMin2 stackWithMin2 = new StackWithMin2();
+
+        stackWithMin2.push(5);
+        System.out.println(stackWithMin2.getMin());
+        stackWithMin2.push(6);
+        System.out.println(stackWithMin2.getMin());
+        stackWithMin2.push(3);
+        System.out.println(stackWithMin2.getMin());
+        stackWithMin2.push(7);
+        System.out.println(stackWithMin2.getMin());
+        stackWithMin2.pop();
+        System.out.println(stackWithMin2.getMin());
+        stackWithMin2.pop();
+        System.out.println(stackWithMin2.getMin());
     }
 }
