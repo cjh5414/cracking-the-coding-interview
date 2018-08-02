@@ -3,12 +3,16 @@ package Q3_04_Queue_via_Stacks;
 
 public class Tester {
     public static void main(String[] args) {
-        MyQue
+        MyQueue myQueue = new MyQueue();
 
-        for (int i = 0; i < 36; i++)
-            setOfStacks.push(i);
+        myQueue.push(2);
+        myQueue.push(4);
+        myQueue.push(10);
 
-        for (int i = 0; i < 37; i++)
-            System.out.println("Popped " + setOfStacks.pop());
+        myQueue.print();
+
+        System.out.println("Pop: " + myQueue.pop());
+        System.out.println("Pop: " + myQueue.pop());
+        System.out.println("Pop: " + myQueue.pop());
     }
 }
