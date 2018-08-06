@@ -10,30 +10,22 @@ class MyQueue<T> {
         newStack.push(value);
     }
 
-    public T pop() {
+    public void shiftStacks() {
         if (oldStack.empty()) {
             int newStackSize = newStack.size();
-            for (int i = 0; i < newStackSize - 1; i++) {
-                oldStack.push(newStack.pop());
-            }
-            return newStack.pop();
-        }
-        else {
-            return oldStack.pop();
-        }
-    }
-
-    public T peek() {
-        if (oldStack.empty()) {
-            int newStackSize = newStack.size();
-
             for (int i = 0; i < newStackSize; i++) {
                 oldStack.push(newStack.pop());
             }
-            return oldStack.peek();
         }
-        else {
-            return oldStack.peek();
-        }
+    }
+
+    public T pop() {
+        shiftStacks();
+        return oldStack.pop();
+    }
+
+    public T peek() {
+        shiftStacks();
+        return oldStack.peek();
     }
 }
