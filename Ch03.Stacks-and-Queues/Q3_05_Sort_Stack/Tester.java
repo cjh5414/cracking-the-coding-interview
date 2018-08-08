@@ -29,7 +29,7 @@ public class Tester {
         stack.push(3);
         stack.push(4);
 
-        stack = Question.sort(stack);
+        Question.sort(stack);
 
         while (!stack.isEmpty())
             System.out.println("pop : " + stack.pop());

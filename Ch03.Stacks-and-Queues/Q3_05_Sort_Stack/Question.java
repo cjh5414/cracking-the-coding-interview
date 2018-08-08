@@ -4,26 +4,20 @@ import java.util.Stack;
 
 
 class Question {
-    public static Stack<Integer> sort(Stack<Integer> stack) {
+    public static void sort(Stack<Integer> stack) {
         Stack<Integer> tempStack = new Stack<Integer>();
         int min = Integer.MAX_VALUE;
 
         while (!stack.isEmpty()) {
             int temp = stack.pop();
-            if (temp < min) {
-                if (min != Integer.MAX_VALUE)
-                    tempStack.push(min);
-                min = temp;
+            while (!tempStack.isEmpty() && temp < tempStack.peek()) {
+                stack.push(tempStack.pop());
             }
-            else
-                tempStack.push(temp);
+
+            tempStack.push(temp);
         }
 
         while (!tempStack.isEmpty())
             stack.push(tempStack.pop());
-
-        stack.push(min);
-
-        return stack;
     }
 }
