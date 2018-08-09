@@ -22,16 +22,26 @@ public class Tester {
             System.out.println("pop : " + sortStack.pop());
         System.out.println("");
 
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(5);
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Question " + i);
+            Stack<Integer> stack = new Stack<Integer>();
+            stack.push(5);
+            stack.push(7);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+            stack.push(6);
+            stack.push(1);
+            stack.push(8);
+            stack.push(5);
 
-        Question.sort(stack);
+            if (i == 0)
+                Question.sort(stack);
+            else if (i == 1)
+                QuestionB.mergeSort(stack);
 
-        while (!stack.isEmpty())
-            System.out.println("pop : " + stack.pop());
+            while (!stack.isEmpty())
+                System.out.println("pop : " + stack.pop());
+        }
     }
 }
