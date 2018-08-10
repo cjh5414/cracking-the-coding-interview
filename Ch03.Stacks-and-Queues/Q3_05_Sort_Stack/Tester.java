@@ -22,7 +22,7 @@ public class Tester {
             System.out.println("pop : " + sortStack.pop());
         System.out.println("");
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("Question " + i);
             Stack<Integer> stack = new Stack<Integer>();
             stack.push(5);
@@ -38,7 +38,9 @@ public class Tester {
             if (i == 0)
                 Question.sort(stack);
             else if (i == 1)
-                QuestionB.mergeSort(stack);
+                stack = QuestionB.mergeSort(stack);
+            else if (i == 2)
+                stack = QuestionC.quickSort(stack);
 
             while (!stack.isEmpty())
                 System.out.println("pop : " + stack.pop());
