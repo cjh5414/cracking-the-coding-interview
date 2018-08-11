@@ -20,4 +20,8 @@ class Animal {
     public String getName() {
         return name;
     }
+
+    public boolean isOlderThan(Animal animal) {
+        return this.id < animal.getId();
+    }
 }

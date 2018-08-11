@@ -19,10 +19,12 @@ class AnimalShelter {
     }
 
     public Animal dequeueAny() {
-        if (cats.peek().getId() > dogs.peek().getId())
-            return dogs.remove();
-        else
+        if (dogs.isEmpty()) return cats.remove();
+        else if (cats.isEmpty()) return dogs.remove();
+        else if (cats.peek().isOlderThan(dogs.peek()))
             return cats.remove();
+        else
+            return dogs.remove();
     }
 
     public Dog dequeueDog() {
