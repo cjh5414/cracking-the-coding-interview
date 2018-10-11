@@ -8,7 +8,7 @@ public class Main {
         QuestionBFS qBFS = new QuestionBFS();
         qBFS.main();
 
-//        QuestionDFS qDFS = new QuestionBFS();
-//        qDFS.main();
+        QuestionDFS qDFS = new QuestionDFS();
+        qDFS.main();
     }
 }
