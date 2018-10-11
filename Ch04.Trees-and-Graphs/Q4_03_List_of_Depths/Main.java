@@ -6,9 +6,9 @@ package Q4_03_List_of_Depths;
 public class Main {
     public static void main(String[] args) {
         QuestionBFS qBFS = new QuestionBFS();
-        qBFSq.main();
+        qBFS.main();
 
-        QuestionDFS qDFS = new QuestionBFS();
-        qDFSq.main();
+//        QuestionDFS qDFS = new QuestionBFS();
+//        qDFS.main();
     }
 }
